@@ -1,3 +1,4 @@
+from sys import stdin, stdout
 def parser(lst):
     out = ""
     for i in lst:
@@ -8,12 +9,12 @@ def parser(lst):
         elif i == "/":
             out = str(eval(out)) + " // "
         elif i == "=":
-            return int(eval(out))
+            return str(eval(out))
 
 
-repeat = int(input())
+repeat = int(stdin.readline())
 for x in range(repeat):
-    instr = input()
-    while not instr.endswith("=") :
-        instr = instr + " " + input()
-    print(parser(instr))
+    instr = stdin.readline()
+    while not instr[:-1].endswith("=") :
+        instr = instr + " " + stdin.readline()
+    stdout.write(parser(instr)+ "\n")

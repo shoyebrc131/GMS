@@ -1,12 +1,11 @@
-repeat = int(input())
+from sys import stdin, stdout
+repeat = int(stdin.readline())
 x = 0
-y = 1
-z = 0
+out = 0
 for i in range(repeat):
-    x = int(input())
-    while x / (5**y) > 0:
-        z = z + int(x / (5**y))
-        y = y + 1
-    print(z)
-    y = 1
-    z = 0
+    tmp = int(stdin.readline())
+    while tmp != 0:
+        tmp //=5
+        out +=tmp
+    stdin.write(str(out)+"\n")
+    out = 0

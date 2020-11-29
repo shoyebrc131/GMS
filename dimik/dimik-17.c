@@ -8,7 +8,8 @@ int main()
     scanf("%hhu \n", &repeat);
     for(i =0; i < repeat; i++)
     {
-        scanf("%[^\n] \n", &instr);
+        scanf("%[^\n]", &instr);
+        gets();
         for(j = 0; j < strlen(instr); j++)
         {
             if (instr[j] == 'a' || instr[j] == 'e' || instr[j] == 'i' || instr[j] == 'o' || instr[j] == 'u' || instr[j] == 'A' || instr[j] == 'E' || instr[j] == 'I' || instr[j] == 'O' || instr[j] == 'U')

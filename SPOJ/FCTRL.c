@@ -1,20 +1,18 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 int main() {
 
     int repeat, innum, out, tmp;
-    cin >> repeat;
+    scanf("%i", &repeat);
     while(repeat--)
     {
         out = 0;
-        cin >> innum;
+        scanf("%i", &innum);
         while(innum)
         {
             innum = innum/5;
             out = out + innum;
         }
-        cout << out << endl;
+        printf("%i\n", out);
     }
     return 0;
-
 }
