@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-int main(){
+int main()
+{
     short i = 999;
     for(;i>=0;--i)
    {
